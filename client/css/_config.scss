@@ -1,0 +1,62 @@
+// resets
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+// break points
+$bp-small: 640px;
+$bp-medium: 768px;
+$bp-large: 1280px;
+$bp-xlarge: 1680px;
+
+// responsive text
+html {
+  font-size: 16px;
+  @include min-screen($bp-medium) {
+    font-size: 20px;
+  }
+}
+
+// colors
+$red: #B22222;
+$red-dark: #8B0000;
+$white: #f5f5f5;
+
+// fonts
+$body-font-family: "Roboto", sans-serif;
+body { 
+	color: $white;
+	font-family: $body-font-family; 
+}
+
+// typography
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+// buttons
+.button, button {
+	border: 0;
+	outline: 0;
+	color: white;
+	padding: .5rem 1rem;
+	background: lighten($red, 5%);
+	border-radius: 5px;
+	border-bottom: .25rem solid $red;
+}
+
+// forms
+input {
+	outline: 0;
+	color: #666;
+	border: none;
+	display: block;
+	padding: .5rem;
+	background: $white;
+	border-radius: 5px;
+	&:focus {
+		background: white;
+	}
+}

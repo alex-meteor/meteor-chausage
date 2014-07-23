@@ -1,0 +1,232 @@
+// global
+body {
+	height: 100vh;
+	@include flexbox;
+  @include flex-direction(column);
+
+  background: #a90329;
+background: -moz-linear-gradient(-45deg,  #a90329 0%, #8f0222 44%, #6d0019 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+background: -webkit-linear-gradient(-45deg,  #a90329 0%,#8f0222 44%,#6d0019 100%);
+background: -o-linear-gradient(-45deg,  #a90329 0%,#8f0222 44%,#6d0019 100%);
+background: -ms-linear-gradient(-45deg,  #a90329 0%,#8f0222 44%,#6d0019 100%);
+background: linear-gradient(135deg,  #a90329 0%,#8f0222 44%,#6d0019 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 );
+
+}
+main {
+	@include flexbox;
+	@include flex(1);
+  @include flex-direction(column);
+}
+section {
+	@include flex(1);
+}
+
+// login page
+#login {
+	@include flexbox;
+	@include align-items(center);
+	@include justify-content(center);
+	overflow: hidden;
+	form {
+		min-width: 80%;
+		@include min-screen($bp-medium) {
+			min-width: 50%;
+		}
+	}
+	input {
+		width: 100%;
+	}
+	button {
+		width: 48%;
+		&:last-of-type {
+			float: right;
+		}
+	}
+}
+.form-group {
+  margin-bottom: 1rem;
+  label {
+	  display: block;
+	  font-size: 1.17rem;
+	  font-weight: bold;
+	  margin-bottom: .5rem;
+  }
+  &:last-of-type {
+  	margin: 0;
+  }
+}
+
+.icon-button {
+	border: none;
+	outline: none;
+	background: none;
+}
+
+// track 
+.track {
+	margin: 0;
+}
+.track-art {
+	vertical-align: top;
+	display: inline-block;
+}
+.track-meta {
+	vertical-align: top;
+	display: inline-block;
+}
+
+// now playing
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 0 100%; }
+}
+#now-playing {
+  @include flex(0 0 10rem);
+  position: relative;
+  padding: 1rem;
+  color: white;
+  text-shadow: -1px 1px 1px black;
+  // background-image: url('../images/oops.jpg');
+	background-position: 0px 0px;
+	background-repeat: repeat-y;
+  animation: animatedBackground 25s linear infinite;
+  .now-playing {
+  	z-index: 99999;
+  	position: relative;
+  }
+  .overlay {
+  	z-index: 1;
+  	top: 0; left: 0; 
+  	position: absolute;
+  	width: 100%; height: 100%;
+		background: -moz-linear-gradient(left,  rgba(109,0,26,0.75) 0%, rgba(109,0,26,0) 100%); background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(109,0,26,0.75)), color-stop(100%,rgba(109,0,26,0))); background: -webkit-linear-gradient(left,  rgba(109,0,26,0.75) 0%,rgba(109,0,26,0) 100%); background: -o-linear-gradient(left,  rgba(109,0,26,0.75) 0%,rgba(109,0,26,0) 100%); background: -ms-linear-gradient(left,  rgba(109,0,26,0.75) 0%,rgba(109,0,26,0) 100%); background: linear-gradient(to right,  rgba(109,0,26,0.75) 0%,rgba(109,0,26,0) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf6d001a', endColorstr='#006d001a',GradientType=1 );
+  }
+  h2 {
+  	font-weight: 100;
+  	font-size: 1.5rem;
+		vertical-align: top;
+	  display: inline-block;
+	  margin-top: 1.5rem;
+	}
+  track {
+  	margin-top: 1rem;
+  	display: block;
+  }
+  .track-art {
+		display: none;
+	}
+	.track-name {
+  	font-size: 1.5rem;
+	}
+	.track-extra {
+		font-weight: 100;
+	}
+}
+
+// queue
+#queue {
+  @include flex(1);
+  overflow-y: auto;
+  background: rgba(0,0,0,.8);
+  ol {
+  	list-style: none;
+  	margin: 0; padding: 0;
+  }
+  li {
+		@include flexbox;
+		@include flex-direction(row);
+		margin: .5rem .5rem .5rem 0;
+		border-bottom: 1px solid rgba(255,255,255,.1);
+		padding-bottom: .5rem;
+  }
+  points {
+  	line-height: 3.5rem;
+  }
+  points, vote {
+	  @include flex(0 0 3rem);
+	  @include align-items(center);
+  }
+  track {
+  	@include flex(1);
+  	padding: .5rem;
+  }
+  points, vote {
+		font-size: 1.5rem;
+		text-align: center;
+		.icon-button {
+			width: 100%;
+			display: block;
+			text-align: center;
+			margin: 0; padding: 0;
+			line-height: 1.5rem;
+			height: 1.75rem; 
+		}
+  }
+  .track-art {
+		width: 2.5rem;
+		height: 2.5rem;
+		margin-right: .5rem;
+	}
+	.track-name {
+    font-size: 1rem;
+    line-height: 1rem;
+    max-width: 13.25rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-bottom: .25rem;
+	}
+	.track-extra {
+		font-weight: 400;
+		font-size: .75rem;
+		max-width: 13.25rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.add-to-queue {
+  	@include flex(0 0 1.75rem);
+		line-height: 3.5rem;
+  	cursor: pointer;
+  	font-size: 2rem;
+  	color: $red;
+  }
+}
+
+#search {
+  @include flex(0 0 4.5rem);
+  input {
+		width: 90%;
+		margin: 1rem auto;
+  }
+}
+
+// about
+#about {
+	padding: 1rem;
+}
+
+// server
+form.search,
+div.section {
+	@include flexbox;
+	@include flex-direction(row);
+	@include justify-content(center);
+}
+div.track.label {
+	margin: 1rem 0;
+}
+button.fa {
+	@include flex(0 0 32%);
+}
+button.prev {
+	margin-right: 2%;
+}
+button.next {
+	margin-left: 2%;
+}
+div.controls {
+	padding: 1rem 1rem 0 1rem;
+}

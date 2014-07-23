@@ -1,0 +1,142 @@
+@-webkit-keyframes music {
+  /* line 2, ../../app/styles/_equalizer.scss */
+  0% {
+    height: 0;
+  }
+
+  /* line 6, ../../app/styles/_equalizer.scss */
+  50% {
+    height: 20px;
+  }
+
+  /* line 10, ../../app/styles/_equalizer.scss */
+  100% {
+    height: 5px;
+  }
+}
+
+@keyframes music {
+  /* line 2, ../../app/styles/_equalizer.scss */
+  0% {
+    height: 0;
+  }
+
+  /* line 6, ../../app/styles/_equalizer.scss */
+  50% {
+    height: 20px;
+  }
+
+  /* line 10, ../../app/styles/_equalizer.scss */
+  100% {
+    height: 5px;
+  }
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/patrickbruns\/Personal\/Projects\/chausages\/app\/styles\/_equalizer\.scss;
+  }
+
+  line {
+    font-family: \0000319;
+  }
+}
+
+.equalizer {
+  vertical-align: top;
+  display: inline-block;
+  margin: 1.75rem 0 0 .5rem;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/patrickbruns\/Personal\/Projects\/chausages\/app\/styles\/_equalizer\.scss;
+  }
+
+  line {
+    font-family: \0000325;
+  }
+}
+
+.equalizer-item {
+  display: inline-block;
+  background: white;
+  width: 3px;
+  height: 20px;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/patrickbruns\/Personal\/Projects\/chausages\/app\/styles\/_equalizer\.scss;
+  }
+
+  line {
+    font-family: \0000332;
+  }
+}
+
+.equalizer-none {
+  opacity: 0;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/patrickbruns\/Personal\/Projects\/chausages\/app\/styles\/_equalizer\.scss;
+  }
+
+  line {
+    font-family: \0000336;
+  }
+}
+
+.equalizer-1 {
+  -webkit-animation: music 0.5s linear infinite;
+  animation: music 0.5s linear infinite;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/patrickbruns\/Personal\/Projects\/chausages\/app\/styles\/_equalizer\.scss;
+  }
+
+  line {
+    font-family: \0000340;
+  }
+}
+
+.equalizer-2 {
+  -webkit-animation: music 0.9s linear infinite;
+  animation: music 0.9s linear infinite;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/patrickbruns\/Personal\/Projects\/chausages\/app\/styles\/_equalizer\.scss;
+  }
+
+  line {
+    font-family: \0000344;
+  }
+}
+
+.equalizer-3 {
+  -webkit-animation: music 0.7s linear infinite;
+  animation: music 0.7s linear infinite;
+}
+
+@media -sass-debug-info {
+  filename {
+    font-family: file\:\/\/\/Users\/patrickbruns\/Personal\/Projects\/chausages\/app\/styles\/main\.scss;
+  }
+
+  line {
+    font-family: \000039;
+  }
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
