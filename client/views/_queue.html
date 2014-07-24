@@ -1,0 +1,23 @@
+<template name="queue">
+	{{> nowPlaying}}
+	<section id="queue">
+	    <ol>
+	        <li>
+	            <vote>
+	                <div class="icon-button"><i class="fa fa-arrow-circle-up"></i></div>
+	                <div class="icon-button"><i class="fa fa-arrow-circle-down"></i></div>
+	            </vote>
+	           <!--  <points votes="entry.votes"></points> -->
+	            <figure class="track">
+				    <img class="track-art" src="/images/oops.jpg"/>
+				    <figcaption class="track-meta">
+				        <h3 class="track-name">Oops, I did it again</h3>
+				        <h4 class="track-extra">Jigglebilly</h4>
+				    </figcaption>
+				</figure>
+	            <i class="info"></i>
+	            <song-info data="entry.info"></song-info>
+	        </li>
+	    </ol>
+	</section>
+</template>
