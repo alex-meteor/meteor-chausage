@@ -1,6 +1,5 @@
   Router.configure
       layoutTemplate: 'layout'
-  
 
   Router.map ->
     this.route 'queue', path: '/'

@@ -148,7 +148,7 @@ section {
 	  @include flex(0 0 3rem);
 	  @include align-items(center);
   }
-  track {
+  .track {
   	@include flex(1);
   	padding: .5rem;
   }
