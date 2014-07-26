@@ -1,18 +1,23 @@
 <template name="login">
     <section id="login">
-        <form ng-controller="LoginController as Login" ng-submit="Login.submit()">
+        <form>
             <div class="form-group">
                 <!-- <label for="username">Username</label> -->
-                <input id="username" type="text" placeholder="Username" ng-model="Login.credentials.username"/>
+                <input id="username" type="text" placeholder="Username"/>
             </div>
             <div class="form-group">
                 <!-- <label for="password">Username</label> -->
-                <input id="password" type="text" placeholder="Password" ng-model="Login.credentials.password"/>
+                <input id="password" type="text" placeholder="Password"/>
             </div>
             <div class="form-group">
-                <button class="button">Sign Up</button>
-                <button class="button" type="submit">Sign In</button>
+                {{> register}}
+                <button class="button" id="loginButton">Sign In</button>
             </div>
         </form>
     </section>
 </template>
+
+<!-- Small Hack to all me to seperate login and register functionality on the same page, forgivness please -->
+<template name="register">
+     <button class="button" id="registerButton">Sign Up</button>
+ </template>
