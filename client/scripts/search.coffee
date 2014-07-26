@@ -7,3 +7,4 @@ if Meteor.isClient
      Template.searchResult.events
         'click .add-to-queue': (e) ->
             Queue.insert $(@)[0]
+            $(e.currentTarget).parent().slideUp()

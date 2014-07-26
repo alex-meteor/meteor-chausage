@@ -1,7 +1,6 @@
 {
   "packages": {
     "scss": {},
-    "font-awesome": {},
     "iron-router": {}
   }
 }
