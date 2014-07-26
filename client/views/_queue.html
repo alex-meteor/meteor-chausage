@@ -1,5 +1,7 @@
 <template name="queue">
-    {{> nowPlaying}}
+	{{#with nowPlayingItem}}
+    	{{> nowPlaying}}
+	{{/with}}
     <section id="queue">
         <ol>
             {{#each queueList}}

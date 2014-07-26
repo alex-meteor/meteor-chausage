@@ -9,3 +9,13 @@ if Meteor.isClient
                     console.log err
                 else
                     console.log 'the user has been logged in'
+         'keypress input': (e) ->
+            if (e.which == 13) 
+                e.preventDefault()
+                username = $('#username').val()
+                password = $('#password').val()
+                Meteor.loginWithPassword username, password, (err) ->
+                    if err
+                        console.log err
+                    else
+                        console.log 'the user has been logged in'

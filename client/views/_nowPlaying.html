@@ -1,5 +1,5 @@
 <template name="nowPlaying">
-	<section id="now-playing" style="background:url('/images/oops.jpg')">
+	<section id="now-playing" style="background:url('{{trackArt}}')">
 	    <div class="now-playing">
 	        <h2>Now Playing</h2>
 	        <div class="equalizer">
@@ -9,10 +9,10 @@
 	            <span class="equalizer-item equalizer-none"></span>
 	        </div>
 	        <figure class="track">
-			    <img class="track-art" src="/images/oops.jpg"/>
+			    <img class="track-art" src="{{trackArt}}"/>
 			    <figcaption class="track-meta">
-			        <h3 class="track-name">Oops, I did it again</h3>
-			        <h4 class="track-extra">Jigglebilly</h4>
+			        <h3 class="track-name">{{name}}</h3><span>{{artist}}</span>
+			        <h4 class="track-extra">Submitted by {{userName}}</h4>
 			    </figcaption>
 			</figure>
 	    </div>

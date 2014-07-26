@@ -1,6 +1,7 @@
 {
   "packages": {
     "scss": {},
-    "iron-router": {}
+    "iron-router": {},
+    "npm": {}
   }
 }
