@@ -10,3 +10,5 @@ font-awesome
 accounts-base
 accounts-password
 npm
+bower
+auto-nprogress

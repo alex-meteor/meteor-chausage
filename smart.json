@@ -2,6 +2,15 @@
   "packages": {
     "scss": {},
     "iron-router": {},
-    "npm": {}
+    "npm": {},
+    "bower": {},
+    "auto-nprogress": {}
+  },
+  "bower": {
+    "animate.css": "3.1.0",
+    "bootstrap-growl": {
+      "source": "mouse0270/bootstrap-growl",
+      "version": "2.0.0"
+    }
   }
 }
